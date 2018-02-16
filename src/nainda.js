@@ -15,12 +15,13 @@ function nainda(string_1, string_2, t) {
   let y0 = -t; // first index of b to be compared for this alignment
   let lowest_score = Infinity;
   for (let i=0; i<n; i++) {
-    let x = 0; // index of a currently being compraed
+    let x = 0; // index of a currently being compared
     let y = y0; // index of b currently being compared
     let s = 0; // score for this alignment
     let skips = 0; // skip count for this alignment
+    const a_ch = a.charCodeAt(x);
     while (y < a_len + y0 + skips) { // go until you run out of characters in a
-      if (a[x] === b[y]) { //
+      if (a_ch === b.charCodeAt(y)) { //
         x++;
         y++;
       }
@@ -28,7 +29,7 @@ function nainda(string_1, string_2, t) {
         let z = 1; // add-on to y
         let match_found = false;
         while (z <= t) {
-          if (a[x] === b[y+z]) { // if a skip of z results in a match
+          if (a_ch === b.charCodeAt(y+z)) { // if a skip of z results in a match
             y = y + z + 1; // set new y
             x++; // set new x
             s += z; // increase score for this alignment by z
@@ -38,7 +39,7 @@ function nainda(string_1, string_2, t) {
           }
           z++;
         }
-        if (match_found === false) { // the maximum number of skips has occurred with no match
+        if (!match_found) { // the maximum number of skips has occurred with no match
           y++; // move to next y
           x++; // move to next x
           s++; // increase score for this alignment by 1
