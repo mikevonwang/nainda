@@ -1,4 +1,4 @@
-function string_compare_fuzzy(string_1, string_2, t) {
+function nainda(string_1, string_2, t) {
   let a;
   let b;
   if (string_2.length < string_1.length) {

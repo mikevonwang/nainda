@@ -1,8 +1,8 @@
 {
-  "name": "fuzzy-search",
+  "name": "nainda",
   "version": "0.0.1",
   "description": "A fuzzy partial string matcher",
-  "main": "dist/fuzzy-search.min.js",
+  "main": "dist/nainda.min.js",
   "dependencies": {},
   "devDependencies": {
     "babel-core": "^6.26.0",
@@ -15,12 +15,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mikevonwang/fuzzy-search.git"
+    "url": "git+https://github.com/mikevonwang/nainda.git"
   },
   "author": "Mike Wang",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mikevonwang/fuzzy-search/issues"
+    "url": "https://github.com/mikevonwang/nainda/issues"
   },
-  "homepage": "https://github.com/mikevonwang/fuzzy-search#readme"
+  "homepage": "https://github.com/mikevonwang/nainda#readme"
 }

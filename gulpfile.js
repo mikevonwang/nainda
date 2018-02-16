@@ -5,7 +5,7 @@ var sourcemaps = require('gulp-sourcemaps');
 var babel = require('gulp-babel');
 
 gulp.task('js', () => {
-  return gulp.src('src/fuzzy-search.js')
+  return gulp.src('src/nainda.js')
   .pipe(sourcemaps.init())
   .pipe(babel({presets: ['env']}))
   .on('error', function(err) {
@@ -15,13 +15,13 @@ gulp.task('js', () => {
     this.emit('end');
   })
   .pipe(uglify())
-  .pipe(rename('fuzzy-search.min.js'))
+  .pipe(rename('nainda.min.js'))
   .pipe(sourcemaps.write('./'))
   .pipe(gulp.dest('dist'))
 });
 
 gulp.task('watch', () => {
-  gulp.watch('src/fuzzy-search.js', ['js']);
+  gulp.watch('src/nainda.js', ['js']);
 });
 
 gulp.task('build', ['js']);
