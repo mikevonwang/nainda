@@ -1,0 +1,26 @@
+{
+  "name": "fuzzy-search",
+  "version": "0.0.1",
+  "description": "A fuzzy partial string matcher",
+  "main": "dist/fuzzy-search.min.js",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sourcemaps": "^2.6.3",
+    "gulp-uglify": "^3.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mikevonwang/fuzzy-search.git"
+  },
+  "author": "Mike Wang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mikevonwang/fuzzy-search/issues"
+  },
+  "homepage": "https://github.com/mikevonwang/fuzzy-search#readme"
+}
