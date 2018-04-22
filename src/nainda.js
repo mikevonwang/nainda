@@ -1,4 +1,4 @@
-function nainda(string_1, string_2, t) {
+const isMatch = (string_1, string_2, t) => {
   let a; // shorter string
   let b; // longer string
   if (string_2.length < string_1.length) {
@@ -19,9 +19,9 @@ function nainda(string_1, string_2, t) {
     let y = y0; // index of b currently being compared
     let s = 0; // score for this alignment
     let skips = 0; // skip count for this alignment
-    const a_ch = a.charCodeAt(x);
     while (y < a_len + y0 + skips) { // go until you run out of characters in a
-      if (a_ch === b.charCodeAt(y)) { //
+      const a_ch = a.charCodeAt(x);
+      if (a.charCodeAt(x) === b.charCodeAt(y)) { //
         x++;
         y++;
       }
@@ -46,10 +46,24 @@ function nainda(string_1, string_2, t) {
         }
       }
     }
+    if (s <= t) {
+      return true;
+    }
     if (s < lowest_score) {
       lowest_score = s;
     }
     y0++; // shift alignment by 1
   }
   return (lowest_score <= t);
+};
+
+const sift = (powder, sieve, t) => {
+  return (powder.filter((grain) => {
+    return isMatch(grain, sieve, t);
+  }));
+}
+
+const Nainda = {
+  isMatch,
+  sift,
 };
